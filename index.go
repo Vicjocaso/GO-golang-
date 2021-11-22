@@ -18,7 +18,7 @@ func main() {
 
 	secret := os.Getenv("aSECRET")
 
-	fmt.Print("a varialbe es: ", secret)
+	fmt.Print("Your env: ", secret)
 	fmt.Printf("\n----------------------------")
 
 	getUser()
@@ -30,7 +30,7 @@ func main() {
 	ReadFile()
 }
 
-//Variables de ambiente
+// Variables de ambiente
 func loadEnv() {
 	err := godotenv.Load()
 	if err != nil {
@@ -40,11 +40,11 @@ func loadEnv() {
 
 // Argumentos de linea de comando
 func getUser() {
-	nombre := flag.String("nombre", "", "El nombre de la persona")
-	edad := flag.Int("edad", 18, "La edad de la persona")
+	name := flag.String("name", "", "The name of the person")
+	age := flag.Int("age", 18, "The Age of the person")
 	flag.Parse()
-	fmt.Println("\nTu nombre es:", *nombre)
-	fmt.Println("\nTu edad es:", *edad)
+	fmt.Println("\nYour name is:", *name)
+	fmt.Println("\nTour asge is:", *age)
 }
 
 // Standard
